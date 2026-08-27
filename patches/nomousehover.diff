@@ -1,0 +1,13 @@
+Index: dwm/dwm.c
+===================================================================
+--- dwm.orig/dwm.c
++++ dwm/dwm.c
+@@ -250,7 +250,7 @@ static void (*handler[LASTEvent]) (XEven
+ 	[ConfigureRequest] = configurerequest,
+ 	[ConfigureNotify] = configurenotify,
+ 	[DestroyNotify] = destroynotify,
+-	[EnterNotify] = enternotify,
++	//[EnterNotify] = enternotify,
+ 	[Expose] = expose,
+ 	[FocusIn] = focusin,
+ 	[KeyPress] = keypress,
