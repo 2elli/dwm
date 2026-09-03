@@ -2,7 +2,7 @@ Index: dwm/config.h
 ===================================================================
 --- /dev/null
 +++ dwm/config.h
-@@ -0,0 +1,122 @@
+@@ -0,0 +1,124 @@
 +/* See LICENSE file for copyright and license details. */
 +
 +/* appearance */
@@ -68,6 +68,7 @@ Index: dwm/config.h
 +static const char *termcmd[]  = { "st", NULL };
 +static const char *browsercmd[]  = { "librewolf", NULL };
 +static const char *lockcmd[]  = { "slock", NULL };
++static const char *rbwcmd[]  = { "st", "-c", "floating_st", "-e", "rbwfzf", NULL };
 +
 +static const Key keys[] = {
 +	/* modifier                     key        function        argument */
@@ -75,6 +76,7 @@ Index: dwm/config.h
 +	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 +	{ MODKEY,                       XK_b,      spawn,          {.v = browsercmd } },
 +	{ MODKEY|ControlMask,           XK_l,      spawn,          {.v = lockcmd } },
++	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = rbwcmd } },
 +	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 +	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 +	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -89,7 +91,7 @@ Index: dwm/config.h
 +	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 +	{ MODKEY,                       XK_space,  setlayout,      {0} },
 +	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-+	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
++	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 +	{ MODKEY,                       XK_minus,  view,           {.ui = ~0 } },
 +	{ MODKEY|ShiftMask,             XK_minus,  tag,            {.ui = ~0 } },
 +	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
