@@ -2,7 +2,7 @@ Index: dwm/config.h
 ===================================================================
 --- /dev/null
 +++ dwm/config.h
-@@ -0,0 +1,124 @@
+@@ -0,0 +1,122 @@
 +/* See LICENSE file for copyright and license details. */
 +
 +/* appearance */
@@ -31,10 +31,8 @@ Index: dwm/config.h
 +	 *	WM_CLASS(STRING) = instance, class
 +	 *	WM_NAME(STRING) = title
 +	 */
-+	/* class      instance    title       tags mask     isfloating   isfullscreen   monitor */
-+	//{ "Gimp",     NULL,       NULL,       0,            1,           0,             -1 },
-+	//{ "Firefox",  NULL,       NULL,       1 << 8,       0,           0,             -1 },
-+	{ NULL,       NULL,       NULL,       0,            0,           0,             -1 },
++	/* class          instance    title       tags mask     isfloating   isfullscreen   monitor */
++	{ "floating_st",  NULL,       NULL,       0,            1,           0,             -1 },
 +};
 +
 +/* layout(s) */
